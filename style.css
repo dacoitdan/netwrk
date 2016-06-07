@@ -31,7 +31,6 @@
 
 .logo {
 	height: 50px;
-	margin: 1em;
 }
 
 #org {
@@ -46,11 +45,10 @@ header {
 	float: left;
 }
 
-header > nav > ul > li,
-footer > nav > ul > li  {
+nav > ul > li  {
 	text-transform: uppercase;
 	list-style: none;
-	padding: 25px;
+	padding: 1em;
 }
 
 li > a {
@@ -58,40 +56,28 @@ li > a {
 	font-weight: lighter;
 	text-decoration: none;
 	color: white;
+	padding: 1em;
 }
 
 main { 
 	background-color: #eee;
 }
 
-main > div {
-
-}
-
-.index h2,
-.about h2,
-.consult h2, 
-.train h2, 
-.locationblock h2 {
+main h2 {
 	font-family: 'montserrat';
 	margin: 2em 1em;
 	text-transform: uppercase;
 	text-align: center;
 }
 
-.index p,
-.about p,
-.consult p, 
-.train p,
-.locationblock p, 
-.content p{
+main p{
 	font-family: 'domine';
 	margin: 1em 0;
 	text-align: left;
 	margin-left: 12.5%;
 	margin-right: 12.5%;
 	color: #555;
-	line-height: 1.5em;
+	line-height: 2em;
 }
 
 main > div {
@@ -157,8 +143,17 @@ main > div {
 	padding: 2em 2em;
 }
 
+.networkimg{
+	display: none;
+}
+
 .content p {
 	padding-top: 1em;
+	line-height: 2em;
+}
+
+#bigimg {
+	height: 100%;
 }
 
 h3,
@@ -216,7 +211,6 @@ form label,
 .class p {
 	font-family: 'domine';
 	color: #555;
-	line-height: 1.5em;
 	margin-left: 0;
 	margin-bottom: 1em;
 }
@@ -306,6 +300,10 @@ form label,
 	margin: 0;
 }
 
+.projects {
+	padding-bottom: 5em;
+}
+
 .project {
 	text-align: left;
 	margin: 1em 0;
@@ -320,13 +318,8 @@ form label,
 	margin: 1em;
 }
 
-.project > h3 {
-	float: left;
-	margin-left: 12.5%;
-}
-
-.projectheader{
-	margin-left: 12.5%;
+.project > img {
+	height: 25px;
 }
 
 .project > img,
@@ -344,7 +337,7 @@ form label,
 	margin: 0 10%;
 }
 
-.location > .locationblock:nth-child(1){
+.locationblock:nth-child(1){
 	border-bottom: 2px solid #eee;
 }
 
@@ -359,7 +352,8 @@ form label,
 }
 
 .locationblock img {
-	margin: 2em;
+	margin: 2em 0;
+	width: 100%;
 }
 
 .locationblock > div > a,
@@ -369,8 +363,10 @@ form label,
 }
 
 .locationblock > h2 {
+	text-align: left;
 	padding-top: 1em;
 	font-size: 1.2em;
+	margin-left: 0;
 }
 
 .locationblock h3 {
@@ -444,5 +440,105 @@ footer {
 
 footer > nav > ul > li > a {
 	color: black;
+}
+
+/*tablet mediaquery*/
+@media screen and (min-width: 550px){
+	main h2:before,
+	main h2:after {
+		content: '\00B7';
+		padding: 1em;
+	}
+
+	.contact h2:before,
+	.contact h2:after{
+		content: '';
+		display: none;
+		padding: 0;
+	}
+
+	header,
+	footer {
+		height: 90px;
+	}
+
+	nav {
+		float: center;
+		width: 100%;
+		padding-left: 5%;
+		padding-right: 5%;
+		line-height: 90px;
+	}
+
+	main p {
+		font-size: 1.1em;
+	}
+
+	nav img {
+		margin-top: 20px;
+	}
+
+	nav > ul > li {
+		float: left;
+		display: inline;
+		line-height: 90px;
+		padding: 0;
+		width: 20%;
+	}
+
+	li > a {
+		padding: 0;
+	}
+
+	.contentblock {
+		width: 50%;
+		float: left;
+		height: 50%;
+	}
+
+	.networkimg {
+		display: inline-block;
+	}
+
+	.project {
+		width: 50%;
+		float: left;
+		height: 35%;
+	}
+
+	.project:nth-child(2n){
+		clear: left;
+	}
+	.speclogo{
+		float: right;
+		margin: 0% 0% 0% 5%;
+		height: 175px;
+	}
+
+	div:nth-child(2n) .speclogo {
+		float: left;
+		margin: 0% 5% 0% 0%;
+	}
+
+	.locationblock {
+		margin: 2em 0;
+	}
+
+	.contactus {
+		padding: 0;
+	}
+
+	.locationblock:nth-child(1){
+		float: right;
+		width: 35%;
+		padding-left: 5%;
+		border-left: 2px solid #ccc;
+		border-bottom-style: none;
+	}
+
+	.form {	
+		float: left;
+		width: 65%;
+	}
 }
 
