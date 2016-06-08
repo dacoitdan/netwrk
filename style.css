@@ -542,3 +542,72 @@ footer > nav > ul > li > a {
 	}
 }
 
+@media screen and (min-width: 850px) {
+	main p {
+		font-size: 1em;
+	}
+
+	.contentblock{
+		float: left;
+		display: inline-block;
+		width: 33.3333%;
+	}
+
+	.networkimg{
+		display: none;
+	}
+
+	.indexbanner{
+		padding: 15vh 0;
+	}
+
+	.indexbanner h1 {
+		font-size: 5em;
+		padding: 0;
+	}
+
+	.indexbanner p {
+		font-size: 3em;
+		padding-top: 1em;
+	}
+
+	.project {
+		width: 33.3333%;
+		float: left;
+		height: 35%;
+	}
+
+	.project:nth-child(3n+2){
+		clear: left;
+	}
+
+	.speclogo{
+		height: 175px;
+	}
+
+	#org{
+		height: 125px;
+	}
+
+	.train div {
+		margin-left: 5%;
+	}
+
+	.class p {
+		margin-top: 1em;
+	}
+
+	.tags{
+		position: relative;
+		right: 15vw;
+		bottom: 25px;
+		height: 0px;
+		padding: 0;
+		margin: 0;
+	}
+
+	.tag{
+		position: relative;
+		display: block;
+	}
+}
